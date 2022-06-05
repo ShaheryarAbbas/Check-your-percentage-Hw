@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Check your Percentage</title>
+</head>
+<body>
+    <label for="">Physics</label>
+    <input type="text" id="phy">
+    <br>
+    <br>
+    <label for="">Chemistry</label>
+    <input type="text" id="che">
+    <br>
+    <br>
+    <label for="">Biology</label>
+    <input type="text" id="bio">
+    <br>
+    <br>
+    <label for="">English</label>
+    <input type="text" id="eng">
+    <br>
+    <br>
+    <label for="">Urdu</label>
+    <input type="text" id="urdu">
+    <br>
+    <br>
+    <button type="submit" onclick="ch()">Check</button>
+    <div id="demo"></div>
+
+    <script>
+        function ch(){
+            var p=parseInt(document.getElementById("phy").value);
+            var c=parseInt(document.getElementById("che").value);
+            var b=parseInt(document.getElementById("bio").value);
+            var e=parseInt(document.getElementById("eng").value);
+            var u=parseInt(document.getElementById("urdu").value);
+            var ob= p+c+b+e+u;
+            per=(ob/500)*100;
+
+            if(per>90){
+                document.getElementById("demo").innerHTML="Physics " + p + "<br> Chemistry " + c + "<br> Biology " + b + "<br> English " + e + "<br> Urdu " + u + "<br> Percentage <br>" + per
+                + "<br> Grade A"
+            }
+            else if(per>=80){
+                document.getElementById("demo").innerHTML="Physics " + p + "<br> Chemistry " + c + "<br> Biology " + b + "<br> English " + e + "<br> Urdu " + u + "<br> Percentage <br>" + per 
+                + "<br> Grade B"
+            }
+            else if(per>=60){
+                document.getElementById("demo").innerHTML="Physics " + p + "<br> Chemistry " + c + "<br> Biology " + b + "<br> English " + e + "<br> Urdu " + u + "<br> Percentage <br>" + per
+                + "<br> Grade C"
+            }
+            else{
+                document.getElementById("demo").innerHTML="Physics " + p + "<br> Chemistry " + c + "<br> Biology " + b + "<br> English " + e + "<br> Urdu " + u + "<br> Percentage <br>" + per
+                + "<br> Fail" 
+            }
+        }
+    </script>
+</body>
+</html>
